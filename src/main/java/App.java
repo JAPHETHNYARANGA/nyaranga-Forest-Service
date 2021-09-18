@@ -15,6 +15,7 @@ public class App {
         }
         return 4567; //return default port if heroku-port isn't set (i.e. on localhost)
     }
+
     public static void main(String[] args) {
         port(getHerokuAssignedPort());
         staticFileLocation("/public");
@@ -29,19 +30,34 @@ public class App {
             return new ModelAndView(model, layout);
         }, new VelocityTemplateEngine());
 
-        get("/animals/new", (request, response) -> {
+        get("/park-animals/new", (request, response) -> {
             Map<String, Object> model = new HashMap<String, Object>();
-
             model.put("rangerName", request.session().attribute("rangerName"));
             model.put("template", "templates/animal.vtl");
             return new ModelAndView(model, layout);
         }, new VelocityTemplateEngine());
 
-        }
-
+        post("/park-animals/new", (request, response) -> {
+            String name = request.queryParams("name");
+            boolean endangered = request.queryParamsValues("endangered") != null;
+            if (endangered) {
+                String health = request.queryParams("health");
+                String age = request.queryParams("age");
+                Endangered endangeredAnimal = new Endangered(name, age, health);
+                endangeredAnimal.save();
+            } else {
+                NonEndangered notEndangered = new NonEndangered(name);
+                notEndangered.save();
+            }
+            response.redirect("/animals");
+            return null;
+        });
 
 
     }
+
+
+}
 
 
 
