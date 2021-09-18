@@ -39,7 +39,7 @@ out/
 .gradle/
 
 # IntelliJ #
-############
+#############
 .idea
 .idea/
 !gradle-wrapper.jar
