@@ -3,6 +3,7 @@ import spark.ModelAndView;
 import java.util.HashMap;
 import java.util.Map;
 import spark.template.velocity.VelocityTemplateEngine;
+import static spark.Spark.*;
 import static spark.Spark.port;
 import static spark.Spark.staticFileLocation;
 
@@ -28,7 +29,7 @@ public class App {
             return new ModelAndView(model, layout);
         }, new VelocityTemplateEngine());
 
-        })
+        }
 
 
 
@@ -36,4 +37,4 @@ public class App {
 
 
 
-}
+
