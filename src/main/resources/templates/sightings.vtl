@@ -1,0 +1,12 @@
+<div class="ul">
+    <h3>List of all sightings</h3>
+    <div class="list-group">
+        #foreach ($sighting in $sightings)
+        <a href="" class="list-group-item list-group-item-action list-group-item-light">Location Spotted: $sighting.getLocation()</a>
+        <a href="" class="list-group-item list-group-item-action list-group-item-light">Ranger Name: $sighting.getRangerName()</a>
+        <a href="" class="list-group-item list-group-item-action list-group-item-light">Time Spotted: $sighting.getFormattedDate()</a>
+        <br/>
+
+        #end
+    </div>
+</div>

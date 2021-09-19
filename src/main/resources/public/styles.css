@@ -1,0 +1,61 @@
+
+.container-fluid{
+width:100%;
+}
+
+.card{
+width:25rem;
+border-radius:0px
+}
+
+label.error {
+   font-size: 11px;
+   color: red;
+}
+
+#go-back{
+color:white;
+}
+#go-back:hover{
+text-decoration:none;
+}
+
+.col-md-12-c{
+background-color:black;
+}
+.horizontal-rule{
+height:4px;
+width:50%;
+background-color: #ed1543;
+}
+
+.nav-link:hover{
+color:yellow;
+}
+
+
+.mt-large{
+margin-top:13%;
+}
+
+.mt-small{
+margin-top:32px;
+}
+
+.btn-custom{
+background-color: #ed1543;
+border-color: #ed1543;
+}
+.btn-custom:hover{
+background-color: #ed1543;
+border-color: #fff;
+}
+
+.parallax {
+background-image:url("https://img4.goodfon.com/wallpaper/nbig/f/7d/lev-zver-fon.jpg");
+  min-height: 0px;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
