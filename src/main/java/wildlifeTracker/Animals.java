@@ -17,7 +17,7 @@ public abstract class Animals {
     public String getName() {
         return name;
     }
-    public boolean getEndangered(){
+    public boolean getendangered(){
         return endangered;
     }
     @Override
