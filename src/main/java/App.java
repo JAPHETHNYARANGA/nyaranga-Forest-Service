@@ -76,21 +76,21 @@ public class App {
             return new ModelAndView(model, layout);
         }, new VelocityTemplateEngine());
 
-        post("/sightings/new", (request, response) ->{
+        post("/park-sightings/new", (request, response) ->{
             Map<String, Object> model = new HashMap<String, Object>();
             Endangered animal = Endangered.find(Integer.parseInt(request.queryParams("animalid")));
             String location = request.queryParams("location");
             String rangername= request.queryParams("rangername");
             Sightings newSighting = new Sightings(location, rangername, animal.getId());
             newSighting.save();
-            model.put("template", "templates/sightings.vtl");
+            model.put("template", "templates/park-sightings.vtl");
             return new ModelAndView(model, layout);
         }, new VelocityTemplateEngine());
 
         get("/sightings", (request, response) ->{
             Map<String, Object> model = new HashMap<String, Object>();
             model.put("sightings", Sightings.all());
-            model.put("template", "templates/sightings.vtl");
+            model.put("template", "templates/park-sightings.vtl");
             return new ModelAndView(model, layout);
         }, new VelocityTemplateEngine());
 
