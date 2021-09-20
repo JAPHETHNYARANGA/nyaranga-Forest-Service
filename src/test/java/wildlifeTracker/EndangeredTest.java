@@ -50,11 +50,5 @@ public class EndangeredTest{
         secondAnimal.save();
         assertEquals(Endangered.find(secondAnimal.getId()), secondAnimal);
     }
-//    @Test
-//    public void update_updatesAnimalNameAndHealth_true(){
-//        Endangered firstAnimal = new Endangered("lion","okay", "young");
-//        firstAnimal.save();
-//        firstAnimal.update("lioness", "healthy");
-//        assertEquals("lioness", Endangered.find(firstAnimal.getId().getName()));
-//    }
+
 }
