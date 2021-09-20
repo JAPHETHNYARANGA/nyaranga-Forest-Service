@@ -13,16 +13,15 @@ public class DB {
 
         try {
             if (System.getenv("DATABASE_URL") == null) {
-                dbUri = new URI("postgres://ec2-3-226-59-11.compute-1.amazonaws.com\n:5432" +
-                        "d5gesi1anj5qq0");
+                dbUri = new URI("postgres://localhost:5432/wildlife_tracker");
             } else {
                 dbUri = new URI(System.getenv("DATABASE_URL"));
             }
             int port = dbUri.getPort();
             String host = dbUri.getHost();
             String path = dbUri.getPath();
-            String username = (dbUri.getUserInfo() == null) ? "kineqkwmulkvun" : dbUri.getUserInfo().split(":")[0];
-            String password = (dbUri.getUserInfo() == null) ? "a51ce621a270a7b2e38f0042354be8ee4ea853b9f43aa5335da7c2aabc1551ee" : dbUri.getUserInfo().split(":")[1];
+            String username = (dbUri.getUserInfo() == null) ? "japhethnyaranga" : dbUri.getUserInfo().split(":")[0];
+            String password = (dbUri.getUserInfo() == null) ? "34120648" : dbUri.getUserInfo().split(":")[1];
             sql2o = new Sql2o("jdbc:postgresql://" + host + ":" + port + path, username, password);
         } catch (URISyntaxException e ) {
             logger.error("Unable to connect to database.");
