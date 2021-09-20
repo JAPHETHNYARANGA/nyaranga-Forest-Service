@@ -16,6 +16,6 @@ nyaranga4@gmail.com
 2.Version control, Git.
 
 for developers , you clone the Repo from https://github.com/JAPHETHNYARANGA/nyaranga-Forest-Service.git
-then compile the Main code and run it, to obtain results.
+then compile the Main code and run it, to obtain results of the animals.
 
 The database setup can be obtained from the create.sql file in the project.
