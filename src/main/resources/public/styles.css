@@ -32,13 +32,16 @@ font-weight:700;
 .animal-form{
 text-align:center;
 color:green;
-opacity:0.8;
 width:150rem;
-
+height: 60rem;
 font-weight:700;
-position:absolute;
-left:50%;
+position:relative;
+left:30%;
 transform: translateX(-50%);
-background-color:black;
+background-color:#A9A9A9;
 padding:20rem;
+}
+
+card{
+opacity:0.5;
 }

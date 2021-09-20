@@ -3,23 +3,26 @@
 
     </div>
     <div class="">
-        <h3>Add New Sighting</h3>
+        <h3 id="h">Record New Sighting</h3>
         <br/>
     <form action="/sightings/new" method="post">
 
         <div class="form-group">
-            <label for="location">Location</label>
+            <label for="location">Animal Locality</label>
             <select class="custom-select" name="location" id="location">
-                <option>Area 1</option>
-                <option>Area 2</option>
-                <option>Area 3</option>
-                <option>Area 4</option>
+                <option>Karura </option>
+                <option>Ngong</option>
+                <option>Mau</option>
+                <option>Chavakali</option>
+                 <option>Mbogo</option>
+                  <option>Amazon</option>
+                   <option>DeathHills</option>
             </select>
         </div>
 
         <div class="form-group">
-            <label for="rangername">Name of Ranger</label>
-            <input class="form-control" type="text" id="rangername" name="rangername" placeholder="Name of ranger"/>
+            <label for="rangername">Ranger Name</label>
+            <input class="form-control" type="text" id="rangername" name="rangername" placeholder="Ranger"/>
         </div>
 
         <div class="form-group">
@@ -32,7 +35,7 @@
         </select>
         </div>
 
-        <button type="submit" class="btn btn-success">Add Sighting</button>
+        <button type="submit" class="btn btn-primary">Submit</button>
     </form>
     </div>
 </div>
