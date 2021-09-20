@@ -36,12 +36,12 @@ public class App {
         }, new VelocityTemplateEngine());
         get("/animals/new", (request, response) -> {
             Map<String, Object> model = new HashMap<>();
-            model.put("HEALTHY", Endangered.HEALTHY);
-            model.put("OKAY", Endangered.OKAY);
-            model.put("ILL", Endangered.ILL);
-            model.put("NEWBORN", Endangered.NEWBORN);
-            model.put("YOUNG", Endangered.YOUNG);
-            model.put("ADULT", Endangered.ADULT);
+            model.put("Top Notch Health", Endangered.HEALTHY);
+            model.put("Neither 100% Nor Ill", Endangered.OKAY);
+            model.put("Very Sick", Endangered.ILL);
+            model.put("Child", Endangered.NEWBORN);
+            model.put("MiddleAged", Endangered.YOUNG);
+            model.put("Adult", Endangered.ADULT);
             model.put("rangerName", request.session().attribute("rangerName"));
             model.put("template", "templates/animal-form.vtl");
             return new ModelAndView(model, layout);
