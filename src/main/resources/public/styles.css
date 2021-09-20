@@ -28,3 +28,17 @@ color:green;
 font-weight:700;
 
 }
+
+.animal-form{
+text-align:center;
+color:green;
+opacity:0.8;
+width:150rem;
+
+font-weight:700;
+position:absolute;
+left:50%;
+transform: translateX(-50%);
+background-color:black;
+padding:20rem;
+}
