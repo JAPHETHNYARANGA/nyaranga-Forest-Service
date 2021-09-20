@@ -22,8 +22,8 @@ dependencies {
     implementation 'com.sparkjava:spark-template-handlebars:2.7.1' //we'll need this for later!
     implementation group: 'org.apache.velocity', name: 'velocity', version: '1.7'
     implementation 'org.slf4j:slf4j-simple:1.7.32' //to ensure easy to read logging.
-    implementation group: 'org.sql2o', name: 'sql2o', version: '1.5.4'
-    implementation group: 'org.postgresql', name: 'postgresql', version: "9.4-1201-jdbc41"
+    implementation group: 'org.sql2o', name: 'sql2o', version: '1.6.0'
+    implementation group: 'org.postgresql', name: 'postgresql', version: '42.2.23.jre7'
     implementation 'com.google.guava:guava:30.1.1-jre'
     testImplementation 'junit:junit:4.13.2'
 }

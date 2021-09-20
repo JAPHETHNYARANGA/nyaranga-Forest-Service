@@ -19,12 +19,11 @@ public abstract class Animals {
 
     @Override
     public boolean equals(Object otherAnimal){
-        if(!(otherAnimal instanceof Animals newAnimal)){
-            return false;
-        }
-        else{
+        if (otherAnimal instanceof Animals newAnimal) {
             return this.getName().equals(newAnimal.getName()) &&
                     this.getId()==(newAnimal.getId());
+        } else {
+            return false;
         }
     }
     public void save(){
