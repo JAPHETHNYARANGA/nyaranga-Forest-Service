@@ -1,19 +1,10 @@
-
-
-
-
-        <div class="card text-center">
-          <div class="card-header">
-           #foreach ($sighting in $sightings)
-          </div>
-          <div class="card-body">
-            <h2> <a href="" class="list-group-item list-group-item-action list-group-item-light">Location Spotted: $sighting.getLocation()</a></h2>
-            <h2><a href="" class="list-group-item list-group-item-action list-group-item-light">Ranger Name: $sighting.getRangerName()</a></h2>
-          </div>
-          <div class="card-footer text-muted">
-            <h2><a href="" class="list-group-item list-group-item-action list-group-item-light">Time Spotted: $sighting.getFormattedDate()</a></h2>
-          </div>
-        </div>
-
+<div class="container">
+    <div class="list-group">
+        #foreach ($sighting in $sightings)
+        <a href="" class="list-group-item list-group-item-action list-group-item-light">Location Spotted: $sighting.getLocation()</a>
+        <a href="" class="list-group-item list-group-item-action list-group-item-light">Ranger Name: $sighting.getRangerName()</a>
+        <a href="" class="list-group-item list-group-item-action list-group-item-light">Time Spotted: $sighting.getFormattedDate()</a>
+        <br/>
         #end
     </div>
+</div>
