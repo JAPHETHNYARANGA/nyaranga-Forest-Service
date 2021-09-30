@@ -9,7 +9,7 @@ public class SightingsTest {
     @Rule
     public DatabaseRules database = new DatabaseRules();
     @Test
-    public void sigtingInstantiates(){
+    public void sigtingsInstantiates(){
             Sightings testSighting = new Sightings("ngong", "Joe",1);
         assertEquals(testSighting instanceof Sightings, true);
     }
